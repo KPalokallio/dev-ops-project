@@ -8,6 +8,11 @@ public class Calculator {
 
     private Scanner scanner = new Scanner(System.in);
 
+    /**
+     * Runs the calculator: prompts user for two numbers and an operator,
+     * then calls the calculate method to perform the operation and prints the result.
+     */
+
     public void runCalculator() {
         System.out.println("Laskin on käynnissä!");
 
