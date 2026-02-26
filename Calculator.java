@@ -30,8 +30,22 @@ public class Calculator {
         System.out.println("Tulos: " + result);
     }
 
-    private double checkNumber(double num) {
+    private double checkNumber(String prompt) {
+        while (true) {
+            System.out.print(prompt);
+            String input = scanner.nextLine();
 
+            if (input.isEmpty()) {
+                System.out.println("Syöte ei voi olla tyhjä!");
+                continue;
+            }
+
+            try {
+                return Double.parseDouble(input);
+            } catch (NumberFormatException e) {
+                System.out.println("Virheellinen syöte! Anna numero.");
+            }
+        }
     }
 
     /**
