@@ -14,7 +14,9 @@ public class Calculator {
      */
 
     public void runCalculator() {
+
         System.out.println("Laskin on käynnissä!");
+
         double a = checkNumber("Anna ensimmäinen luku: ");
         double b = checkNumber("Anna toinen luku: ");
 
@@ -74,5 +76,6 @@ public class Calculator {
             default:
                 System.out.println("Tuntematon operaattori!");
                 return 0;
+        }
     }
 }
