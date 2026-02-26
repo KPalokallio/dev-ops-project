@@ -15,12 +15,8 @@ public class Calculator {
 
     public void runCalculator() {
         System.out.println("Laskin on käynnissä!");
-
-        System.out.print("Anna ensimmäinen luku: ");
-        double a = scanner.nextDouble();
-
-        System.out.print("Anna toinen luku: ");
-        double b = scanner.nextDouble();
+        double a = checkNumber("Anna ensimmäinen luku: ");
+        double b = checkNumber("Anna toinen luku: ");
 
         System.out.print("Valitse operaattori (+, -, *, /): ");
         String operator = scanner.next();
