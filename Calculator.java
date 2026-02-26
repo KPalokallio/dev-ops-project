@@ -18,6 +18,7 @@ public class Calculator {
 
         double result = calculate(a, b, operator);
 
+        System.out.println("Tulos: " + result);
     }
 
     private double calculate(double num1, double num2, String operator) {
