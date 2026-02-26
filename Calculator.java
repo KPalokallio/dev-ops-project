@@ -30,6 +30,10 @@ public class Calculator {
         System.out.println("Tulos: " + result);
     }
 
+    private double checkNumber(double num) {
+
+    }
+
     /**
      * Performs the calculation based on the given operator and numbers.
      *
