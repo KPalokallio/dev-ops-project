@@ -30,6 +30,15 @@ public class Calculator {
         System.out.println("Tulos: " + result);
     }
 
+    /**
+     * Performs the calculation based on the given operator and numbers.
+     *
+     * @param num1 First number
+     * @param num2 Second number
+     * @param operator The operator to use for the calculation
+     * @return The result of the calculation
+     */
+
     private double calculate(double num1, double num2, String operator) {
         switch (operator) {
             case "+": return num1 + num2;
