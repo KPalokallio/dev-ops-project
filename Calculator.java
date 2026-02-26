@@ -1,5 +1,9 @@
 import java.util.Scanner;
 
+/**
+ * Simple calculator application that performs basic operations.
+ */
+
 public class Calculator {
 
     private Scanner scanner = new Scanner(System.in);
