@@ -26,6 +26,13 @@ public class Calculator {
         System.out.println("Tulos: " + result);
     }
 
+    /**
+     * Checks if the user input is a valid number. If not, it prompts the user again until a valid number is entered.
+     *
+     * @param prompt The message to display when asking for input
+     * @return The valid number
+     */
+
     private double checkNumber(String prompt) {
         while (true) {
             System.out.print(prompt);
