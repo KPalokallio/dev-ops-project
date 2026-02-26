@@ -26,6 +26,14 @@ public class Calculator {
             case "+": return num1 + num2;
             case "-": return num1 - num2;
             case "*": return num1 * num2;
-
+            case "/":
+                if (num2 == 0) {
+                    System.out.println("Nollalla ei voi jakaa!");
+                    return 0;
+                }
+                return num1 / num2;
+            default:
+                System.out.println("Tuntematon operaattori!");
+                return 0;
     }
 }
