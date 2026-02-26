@@ -12,6 +12,9 @@ public class Calculator {
 
         System.out.print("Anna toinen luku: ");
         double b = scanner.nextDouble();
+
+        System.out.print("Valitse operaattori (+, -, *, /): ");
+        String operator = scanner.next();
     }
 
     private double calculate(double num1, double num2, String operator) {
