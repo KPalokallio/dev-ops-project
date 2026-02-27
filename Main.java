@@ -13,6 +13,14 @@ public class Main {
 
             System.out.print("Your choice: ");
             String choice = scanner.nextLine();
+
+            switch (choice) {
+                case "0":
+                    running = false;
+                    break;
+                default:
+                    System.out.println("Invalid choice!");
+            }
         }
     }
 }
