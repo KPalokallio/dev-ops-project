@@ -15,6 +15,9 @@ public class Main {
             String choice = scanner.nextLine();
 
             switch (choice) {
+                case "1":
+                    Calculator.runCalculator(scanner);
+                    break;
                 case "0":
                     running = false;
                     break;
@@ -22,5 +25,7 @@ public class Main {
                     System.out.println("Invalid choice!");
             }
         }
+
+        scanner.close();
     }
 }
