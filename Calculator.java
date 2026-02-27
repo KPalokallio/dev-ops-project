@@ -3,52 +3,48 @@ import java.util.Scanner;
 /**
  * Simple calculator application that performs basic operations.
  */
-
 public class Calculator {
-
-    private Scanner scanner = new Scanner(System.in);
 
     /**
      * Runs the calculator: prompts user for two numbers and an operator,
      * then calls the calculate method to perform the operation and prints the result.
      */
+    public static void runCalculator(Scanner scanner) {
 
-    public void runCalculator() {
+        System.out.println("Calculator is running!");
 
-        System.out.println("Laskin on käynnissä!");
+        double a = checkNumber(scanner, "Enter the first number: ");
+        double b = checkNumber(scanner, "Enter the second number: ");
 
-        double a = checkNumber("Anna ensimmäinen luku: ");
-        double b = checkNumber("Anna toinen luku: ");
-
-        System.out.print("Valitse operaattori (+, -, *, /): ");
-        String operator = scanner.next();
+        System.out.print("Choose operator (+, -, *, /): ");
+        String operator = scanner.nextLine();
 
         double result = calculate(a, b, operator);
 
-        System.out.println("Tulos: " + result);
+        System.out.println("Result: " + result);
     }
 
     /**
      * Checks if the user input is a valid number. If not, it prompts the user again until a valid number is entered.
      *
+     * @param scanner Scanner instance passed from Main
      * @param prompt The message to display when asking for input
      * @return The valid number
      */
-
-    private double checkNumber(String prompt) {
+    private static double checkNumber(Scanner scanner, String prompt) {
         while (true) {
             System.out.print(prompt);
             String input = scanner.nextLine();
 
             if (input.isEmpty()) {
-                System.out.println("Syöte ei voi olla tyhjä!");
+                System.out.println("Input cannot be empty!");
                 continue;
             }
 
             try {
                 return Double.parseDouble(input);
             } catch (NumberFormatException e) {
-                System.out.println("Virheellinen syöte! Anna numero.");
+                System.out.println("Invalid input! Please enter a number.");
             }
         }
     }
@@ -61,20 +57,19 @@ public class Calculator {
      * @param operator The operator to use for the calculation
      * @return The result of the calculation
      */
-
-    private double calculate(double num1, double num2, String operator) {
+    private static double calculate(double num1, double num2, String operator) {
         switch (operator) {
             case "+": return num1 + num2;
             case "-": return num1 - num2;
             case "*": return num1 * num2;
             case "/":
                 if (num2 == 0) {
-                    System.out.println("Nollalla ei voi jakaa!");
+                    System.out.println("Division by zero is not allowed!");
                     return 0;
                 }
                 return num1 / num2;
             default:
-                System.out.println("Tuntematon operaattori!");
+                System.out.println("Unknown operator!");
                 return 0;
         }
     }
