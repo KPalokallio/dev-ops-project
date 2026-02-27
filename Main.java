@@ -7,7 +7,12 @@ public class Main {
         boolean running = true;
 
         while (running) {
+            System.out.println("\nChoose an option:");
+            System.out.println("1. Calculator");
+            System.out.println("0. Exit");
 
+            System.out.print("Your choice: ");
+            String choice = scanner.nextLine();
         }
     }
 }
