@@ -6,14 +6,14 @@ import java.util.Scanner;
 
 public class Calculator {
 
-    private Scanner scanner = new Scanner(System.in);
+    private static Scanner scanner = new Scanner(System.in);
 
     /**
      * Runs the calculator: prompts user for two numbers and an operator,
      * then calls the calculate method to perform the operation and prints the result.
      */
 
-    public void runCalculator() {
+    public static void runCalculator() {
 
         System.out.println("Laskin on käynnissä!");
 
@@ -21,7 +21,7 @@ public class Calculator {
         double b = checkNumber("Anna toinen luku: ");
 
         System.out.print("Valitse operaattori (+, -, *, /): ");
-        String operator = scanner.next();
+        String operator = scanner.nextLine();
 
         double result = calculate(a, b, operator);
 
@@ -35,7 +35,7 @@ public class Calculator {
      * @return The valid number
      */
 
-    private double checkNumber(String prompt) {
+    private static double checkNumber(String prompt) {
         while (true) {
             System.out.print(prompt);
             String input = scanner.nextLine();
@@ -62,7 +62,7 @@ public class Calculator {
      * @return The result of the calculation
      */
 
-    private double calculate(double num1, double num2, String operator) {
+    private static double calculate(double num1, double num2, String operator) {
         switch (operator) {
             case "+": return num1 + num2;
             case "-": return num1 - num2;
