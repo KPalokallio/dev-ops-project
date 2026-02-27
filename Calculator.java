@@ -5,18 +5,16 @@ import java.util.Scanner;
  */
 public class Calculator {
 
-    private static Scanner scanner = new Scanner(System.in);
-
     /**
      * Runs the calculator: prompts user for two numbers and an operator,
      * then calls the calculate method to perform the operation and prints the result.
      */
-    public static void runCalculator() {
+    public static void runCalculator(Scanner scanner) {
 
         System.out.println("Calculator is running!");
 
-        double a = checkNumber("Enter the first number: ");
-        double b = checkNumber("Enter the second number: ");
+        double a = checkNumber(scanner, "Enter the first number: ");
+        double b = checkNumber(scanner, "Enter the second number: ");
 
         System.out.print("Choose operator (+, -, *, /): ");
         String operator = scanner.nextLine();
@@ -29,10 +27,11 @@ public class Calculator {
     /**
      * Checks if the user input is a valid number. If not, it prompts the user again until a valid number is entered.
      *
+     * @param scanner Scanner instance passed from Main
      * @param prompt The message to display when asking for input
      * @return The valid number
      */
-    private static double checkNumber(String prompt) {
+    private static double checkNumber(Scanner scanner, String prompt) {
         while (true) {
             System.out.print(prompt);
             String input = scanner.nextLine();
