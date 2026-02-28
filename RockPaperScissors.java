@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class RockPaperScissors {
@@ -6,5 +7,6 @@ public class RockPaperScissors {
 
     public static void runGame(Scanner scanner) {
         System.out.println("\nWelcome to Rock-Paper-Scissors Game!");
+        Random r = new Random();
     }
 }
