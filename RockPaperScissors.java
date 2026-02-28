@@ -8,5 +8,8 @@ public class RockPaperScissors {
     public static void runGame(Scanner scanner) {
         System.out.println("\nWelcome to Rock-Paper-Scissors Game!");
         Random r = new Random();
+
+        System.out.print("Singleplayer (1) or two-players (2)? Enter 1 or 2: ");
+        String mode = scanner.nextLine();
     }
 }
