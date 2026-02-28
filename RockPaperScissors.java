@@ -20,4 +20,8 @@ public class RockPaperScissors {
             System.out.println("Invalid mode!");
         }
     }
+
+        private static void playAgainstComputer(Scanner scanner, Random r) {
+
+    }
 }
