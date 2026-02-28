@@ -11,5 +11,13 @@ public class RockPaperScissors {
 
         System.out.print("Singleplayer (1) or two-players (2)? Enter 1 or 2: ");
         String mode = scanner.nextLine();
+
+        if (mode.equals("1")) {
+
+        } else if (mode.equals("2")) {
+
+        } else {
+            System.out.println("Invalid mode!");
+        }
     }
 }
