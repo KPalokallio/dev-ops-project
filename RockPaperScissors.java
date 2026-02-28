@@ -21,7 +21,9 @@ public class RockPaperScissors {
         }
     }
 
-        private static void playAgainstComputer(Scanner scanner, Random r) {
+    private static void singlePlayer(Scanner scanner, Random r) {
+        String choice = scanner.nextLine().toLowerCase();
 
+        System.out.println("You chose: " + choice);
     }
 }
