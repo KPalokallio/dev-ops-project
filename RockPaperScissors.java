@@ -8,16 +8,28 @@ public class RockPaperScissors {
     public static void runGame(Scanner scanner) {
         System.out.println("\nWelcome to Rock-Paper-Scissors Game!");
         Random r = new Random();
+        boolean playing = true;
 
-        System.out.print("Singleplayer (1) or two-players (2)? Enter 1 or 2: ");
-        String mode = scanner.nextLine();
+        while (playing) {
+            System.out.println("\nSingleplayer (1) or two-players (2)? Enter 1 or 2");
+            System.out.println("Press 0 to quit");
+            System.out.print("Your choice: ");
+            String mode = scanner.nextLine().trim();
 
-        if (mode.equals("1")) {
-            singlePlayer(scanner, r);
-        } else if (mode.equals("2")) {
-            twoPlayer(scanner);
-        } else {
-            System.out.println("Invalid mode!");
+            switch (mode) {
+                case "1":
+                    singlePlayer(scanner, r);
+                    break;
+                case "2":
+                    twoPlayer(scanner);
+                    break;
+                case "0":
+                    playing = false;
+                    System.out.println("Thanks for playing!");
+                    break;
+                default:
+                    System.out.println("Invalid choice!");
+            }
         }
     }
 
@@ -55,6 +67,9 @@ public class RockPaperScissors {
             return;
         }
 
+        System.out.println("Player 1 chose: " + player1);
+        System.out.println("Player 2 chose: " + player2);
+
         String gameResult = result(player1, player2, false);
         System.out.println(gameResult);
     }
@@ -70,8 +85,8 @@ public class RockPaperScissors {
         if (user.equals(opponent)) {
             return "Draw";
         } else if ((user.equals("rock") && opponent.equals("scissors")) ||
-                (user.equals("paper") && opponent.equals("rock")) ||
-                (user.equals("scissors") && opponent.equals("paper"))) {
+                   (user.equals("paper") && opponent.equals("rock")) ||
+                   (user.equals("scissors") && opponent.equals("paper"))) {
             return isSinglePlayer ? "You win!" : "Player 1 wins!";
         } else {
             return isSinglePlayer ? "You lose!" : "Player 2 wins!";
