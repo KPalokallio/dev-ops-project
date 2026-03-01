@@ -38,6 +38,10 @@ public class RockPaperScissors {
         System.out.println(gameResult);
     }
 
+    private static void twoPlayer(Scanner scanner) {
+
+}
+
     private static boolean isValid(String choice) {
         for (String option : options) {
             if (option.equals(choice)) return true;
