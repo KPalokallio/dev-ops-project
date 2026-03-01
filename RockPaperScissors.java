@@ -41,7 +41,16 @@ public class RockPaperScissors {
         return false;
     }
 
-        private static String result(String user, String opponent) {
+    private static String result(String user, String opponent) {
+        if (user.equals(opponent)) {
+            return "Draw";
+        } else if ((user.equals("rock") && opponent.equals("scissors")) ||
+                (user.equals("paper") && opponent.equals("rock")) ||
+                (user.equals("scissors") && opponent.equals("paper"))) {
+            return "You win!";
+        } else {
+            return "You lose!";
+        }
 
     }
 
