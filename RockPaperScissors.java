@@ -55,6 +55,9 @@ public class RockPaperScissors {
             return;
         }
 
+        System.out.println("Player 1 choise: " + player1);
+        System.out.println("Player 2 choise: " + player2);
+
         String gameResult = result(player1, player2);
         System.out.println(gameResult);
     }
