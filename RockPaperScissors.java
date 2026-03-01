@@ -34,7 +34,7 @@ public class RockPaperScissors {
         System.out.println("Your choice: " + choice);
         System.out.println("Computer choice: " + computerChoice);
 
-        String gameResult = result(choice, computerChoice);
+        String gameResult = result(choice, computerChoice, true);
         System.out.println(gameResult);
     }
 
@@ -55,10 +55,7 @@ public class RockPaperScissors {
             return;
         }
 
-        System.out.println("Player 1 choise: " + player1);
-        System.out.println("Player 2 choise: " + player2);
-
-        String gameResult = result(player1, player2);
+        String gameResult = result(player1, player2, false);
         System.out.println(gameResult);
     }
 
@@ -69,15 +66,15 @@ public class RockPaperScissors {
         return false;
     }
 
-    private static String result(String user, String opponent) {
+    private static String result(String user, String opponent, boolean isSinglePlayer) {
         if (user.equals(opponent)) {
             return "Draw";
         } else if ((user.equals("rock") && opponent.equals("scissors")) ||
-                   (user.equals("paper") && opponent.equals("rock")) ||
-                   (user.equals("scissors") && opponent.equals("paper"))) {
-            return "You win!";
+                (user.equals("paper") && opponent.equals("rock")) ||
+                (user.equals("scissors") && opponent.equals("paper"))) {
+            return isSinglePlayer ? "You win!" : "Player 1 wins!";
         } else {
-            return "You lose!";
+            return isSinglePlayer ? "You lose!" : "Player 2 wins!";
         }
     }
 }
