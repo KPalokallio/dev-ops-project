@@ -15,7 +15,7 @@ public class RockPaperScissors {
         if (mode.equals("1")) {
             singlePlayer(scanner, r);
         } else if (mode.equals("2")) {
-
+            twoPlayer(scanner);
         } else {
             System.out.println("Invalid mode!");
         }
