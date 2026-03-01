@@ -32,6 +32,8 @@ public class RockPaperScissors {
         }
         System.out.println("Your choise: " + choice);
         System.out.println("Computer choise: " + computerChoice);
+        String gameResult = result(choice, computerChoice);
+        System.out.println(gameRsult);
     }
 
     private static boolean isValid(String choice) {
