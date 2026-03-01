@@ -30,8 +30,10 @@ public class RockPaperScissors {
             System.out.println("Invalid choice!");
             return;
         }
-        System.out.println("Your choise: " + choice);
-        System.out.println("Computer choise: " + computerChoice);
+
+        System.out.println("Your choice: " + choice);
+        System.out.println("Computer choice: " + computerChoice);
+
         String gameResult = result(choice, computerChoice);
         System.out.println(gameResult);
     }
@@ -47,16 +49,11 @@ public class RockPaperScissors {
         if (user.equals(opponent)) {
             return "Draw";
         } else if ((user.equals("rock") && opponent.equals("scissors")) ||
-                (user.equals("paper") && opponent.equals("rock")) ||
-                (user.equals("scissors") && opponent.equals("paper"))) {
+                   (user.equals("paper") && opponent.equals("rock")) ||
+                   (user.equals("scissors") && opponent.equals("paper"))) {
             return "You win!";
         } else {
             return "You lose!";
         }
-
     }
-
-
 }
-
-
