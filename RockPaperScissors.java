@@ -41,6 +41,11 @@ public class RockPaperScissors {
         return false;
     }
 
+        private static String result(String user, String opponent) {
+
+    }
+
+
 }
 
 
