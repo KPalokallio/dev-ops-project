@@ -28,7 +28,9 @@ public class RockPaperScissors {
     }
 
     private static boolean isValid(String choice) {
-
+        for (String option : options) {
+            if (option.equals(choice)) return true;
+        }
         return false;
     }
 
