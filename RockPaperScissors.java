@@ -26,6 +26,12 @@ public class RockPaperScissors {
         String choice = scanner.nextLine().toLowerCase();
         System.out.println("You chose: " + choice);
     }
+
+    private static boolean isValid(String choice) {
+
+        return false;
+    }
+
 }
 
 
