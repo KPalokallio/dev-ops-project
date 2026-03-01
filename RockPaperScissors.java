@@ -47,6 +47,14 @@ public class RockPaperScissors {
             return;
         }
 
+    System.out.print("Player 2, enter rock, paper, or scissors: ");
+    String player2 = scanner.nextLine().toLowerCase();
+
+    if (!isValid(player2)) {
+        System.out.println("Invalid choice!");
+        return;
+    }
+
 }
 
     private static boolean isValid(String choice) {
