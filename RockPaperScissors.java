@@ -22,8 +22,10 @@ public class RockPaperScissors {
     }
 
     private static void singlePlayer(Scanner scanner, Random r) {
+        System.out.print("Enter rock, paper, or scissors: ");
         String choice = scanner.nextLine().toLowerCase();
-
         System.out.println("You chose: " + choice);
     }
 }
+
+
