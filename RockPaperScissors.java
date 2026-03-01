@@ -13,7 +13,7 @@ public class RockPaperScissors {
         String mode = scanner.nextLine();
 
         if (mode.equals("1")) {
-
+            singlePlayer(scanner, r);
         } else if (mode.equals("2")) {
 
         } else {
