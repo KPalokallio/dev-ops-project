@@ -39,6 +39,13 @@ public class RockPaperScissors {
     }
 
     private static void twoPlayer(Scanner scanner) {
+        System.out.print("Player 1, enter rock, paper, or scissors: ");
+        String player1 = scanner.nextLine().toLowerCase();
+
+        if (!isValid(player1)) {
+            System.out.println("Invalid choice!");
+            return;
+        }
 
 }
 
