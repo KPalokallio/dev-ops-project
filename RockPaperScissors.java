@@ -24,12 +24,14 @@ public class RockPaperScissors {
     private static void singlePlayer(Scanner scanner, Random r) {
         System.out.print("Enter rock, paper, or scissors: ");
         String choice = scanner.nextLine().toLowerCase();
+        String computerChoice = options[r.nextInt(options.length)];
 
         if (!isValid(choice)) {
             System.out.println("Invalid choice!");
             return;
         }
         System.out.println("Your choise: " + choice);
+        System.out.println("Computer choise: " + computerChoice);
     }
 
     private static boolean isValid(String choice) {
