@@ -16,6 +16,11 @@ public class MemoryGame {
     }
 
     private static void fillBoard() {
+        List<String> cards = new ArrayList<>();
+        for (int i = 1; i <= 8; i++) {
+            cards.add(String.valueOf(i));
+            cards.add(String.valueOf(i));
+        }
 
     }
 
