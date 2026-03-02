@@ -53,7 +53,32 @@ public class MemoryGame {
     }
 
     private static int[] select(Scanner scanner) {
+        int row = -1;
+        int col = -1;
+        boolean valid = false;
 
+        while (!valid) {
+            try {
+                System.out.print("Enter row (1-4): ");
+                row = Integer.parseInt(scanner.nextLine()) - 1;
+                System.out.print("Enter column (1-4): ");
+                col = Integer.parseInt(scanner.nextLine()) - 1;
+
+                if (row >= 0 && row < 4 && col >= 0 && col < 4) {
+                    if (!revealed[row][col]) {
+                        valid = true;
+                    } else {
+                        System.out.println("Card already revealed. Choose another.");
+                    }
+                } else {
+                    System.out.println("Invalid coordinates.");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Please enter numbers");
+            }
+        }
+
+        return new int[]{row, col};
     }
 
 }
