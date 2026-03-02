@@ -13,7 +13,17 @@ public class MemoryGame {
         int Pairs = 8;
 
         while (found < Pairs) {
+            printBoard();
 
+            System.out.println("Select first card");
+            int[] first = select(scanner);
+            revealed[first[0]][first[1]] = true;
+            printBoard();
+
+            System.out.println("Select second card");
+            int[] second = select(scanner);
+            revealed[second[0]][second[1]] = true;
+            printBoard();
         }
 
     }
