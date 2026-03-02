@@ -26,6 +26,15 @@ public class MemoryGame {
         }
         Collections.shuffle(cards);
 
+        int cardIndex = 0;
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                board[i][j] = cards.get(cardIndex);
+                revealed[i][j] = false;
+                cardIndex++;
+            }
+        }
+
 
     }
 
