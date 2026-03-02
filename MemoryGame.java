@@ -116,6 +116,19 @@ public class MemoryGame {
         }
     }
 
+    /**
+     * Prompts the player to select a card by entering row and column.
+     *
+     * Validates user input to ensure coordinates are within bounds
+     * and the selected card is not already revealed.
+     *
+     * Entering 0 for row or column will terminate the game.
+     *
+     * @param scanner Scanner used for reading user input
+     * @return an integer array containing the selected row and column,
+     *         or {-1, -1} if the user chooses to quit
+     */
+
     private static int[] select(Scanner scanner) {
         int row = -1;
         int col = -1;
