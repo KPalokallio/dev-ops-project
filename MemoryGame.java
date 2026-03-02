@@ -34,6 +34,7 @@ public class MemoryGame {
                 revealed[second[0]][second[1]] = false;
             }
         }
+        System.out.println("You found all pairs!");
 
     }
 
