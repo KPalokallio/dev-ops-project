@@ -94,6 +94,13 @@ public class MemoryGame {
         }
     }
 
+    /**
+     * Prints the current state of the game board to the console.
+     *
+     * Revealed cards display their value, while hidden cards
+     * are shown as empty brackets.
+     */
+
     private static void printBoard() {
         System.out.println("\nMemory Game\n");
 
