@@ -24,6 +24,15 @@ public class MemoryGame {
             int[] second = select(scanner);
             revealed[second[0]][second[1]] = true;
             printBoard();
+
+            if (board[first[0]][first[1]].equals(board[second[0]][second[1]])) {
+                System.out.println("You found a match!");
+                found++;
+            } else {
+                System.out.println("Not a match.");
+                revealed[first[0]][first[1]] = false;
+                revealed[second[0]][second[1]] = false;
+            }
         }
 
     }
