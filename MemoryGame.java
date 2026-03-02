@@ -52,5 +52,8 @@ public class MemoryGame {
 
     }
 
+    private static int[] select(Scanner scanner) {
+
+    }
 
 }
