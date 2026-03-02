@@ -12,6 +12,8 @@ public class MemoryGame {
         int found = 0;
         int Pairs = 8;
 
+        fillBoard();
+
         while (found < Pairs) {
             printBoard();
 
