@@ -38,8 +38,19 @@ public class MemoryGame {
     }
 
     private static void printBoard() {
+        System.out.println("\nMemory Game");
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                if (revealed[i][j]) {
+                    System.out.print(" " + board[i][j] + " ");
+                } else {
+                    System.out.print(" * ");
+                }
+            }
+        System.out.println();
+        }
 
-}
+    }
 
 
 }
