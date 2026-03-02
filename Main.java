@@ -23,6 +23,9 @@ public class Main {
                 case "2":
                     RockPaperScissors.runGame(scanner);
                     break;
+                case "3":
+                    MemoryGame.runMG(scanner);
+                    break;
                 case "0":
                     running = false;
                     break;
