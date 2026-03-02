@@ -17,6 +17,17 @@ public class MemoryGame {
     private static final String[][] board = new String[4][4];
     private static final boolean[][] revealed = new boolean[4][4];
 
+    /**
+     * Starts and runs the Memory Game.
+     *
+     * Initializes the board and controls the main game loop.
+     * The player selects two cards per turn. If the cards match,
+     * the pair is counted as found. The game ends when all pairs
+     * are found or when the player chooses to quit.
+     *
+     * @param scanner Scanner used for reading user input
+     */
+
     public static void runMG(Scanner scanner) {
         int found = 0;
         int pairs = 8;
