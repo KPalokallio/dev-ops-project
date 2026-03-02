@@ -25,6 +25,7 @@ public class MemoryGame {
 
             System.out.println("Select second card");
             int[] second = select(scanner);
+            if (second[0] == -1) break;
             revealed[second[0]][second[1]] = true;
             printBoard();
 
