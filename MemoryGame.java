@@ -70,7 +70,7 @@ public class MemoryGame {
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
                 if (revealed[i][j]) {
-                    System.out.print(" " + board[i][j] + " ");
+                    System.out.print(" [" + board[i][j] + "] ");
                 } else {
                     System.out.print(" [ ] ");
                 }
