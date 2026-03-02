@@ -66,7 +66,7 @@ public class MemoryGame {
     }
 
     private static void printBoard() {
-        System.out.println("\nMemory Game");
+        System.out.println("\nMemory Game\n");
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
                 if (revealed[i][j]) {
