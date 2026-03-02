@@ -3,6 +3,15 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * MemoryGame is a simple console-based memory card game.
+ *
+ * The game board is 4x4 and contains 8 pairs of matching cards.
+ * The player selects two cards per turn and tries to find matching pairs.
+ *
+ * The game continues until all pairs are found or the player quits.
+ */
+
 public class MemoryGame {
 
     private static final String[][] board = new String[4][4];
