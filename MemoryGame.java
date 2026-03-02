@@ -86,6 +86,7 @@ public class MemoryGame {
                 if (row == -1) return new int[]{-1, -1};
                 System.out.print("Enter column (1-4): ");
                 col = Integer.parseInt(scanner.nextLine()) - 1;
+                if (col == -1) return new int[]{-1, -1};
 
                 if (row >= 0 && row < 4 && col >= 0 && col < 4) {
                     if (!revealed[row][col]) {
