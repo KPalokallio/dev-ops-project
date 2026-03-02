@@ -66,6 +66,13 @@ public class MemoryGame {
         }
     }
 
+    /**
+     * Fills the game board with shuffled card pairs.
+     *
+     * Creates 8 pairs of numbered cards (1–8), shuffles them,
+     * and assigns them to the 4x4 board.
+     */
+
     private static void fillBoard() {
         List<String> cards = new ArrayList<>();
 
