@@ -19,6 +19,7 @@ public class MemoryGame {
 
             System.out.println("Select first card (enter 0 to quit):");
             int[] first = select(scanner);
+            if (first[0] == -1) break;
             revealed[first[0]][first[1]] = true;
             printBoard();
 
