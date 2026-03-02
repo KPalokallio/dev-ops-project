@@ -72,7 +72,7 @@ public class MemoryGame {
                 if (revealed[i][j]) {
                     System.out.print(" " + board[i][j] + " ");
                 } else {
-                    System.out.print(" * ");
+                    System.out.print(" [ ] ");
                 }
             }
         System.out.println();
