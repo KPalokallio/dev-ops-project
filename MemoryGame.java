@@ -38,23 +38,26 @@ public class MemoryGame {
                 revealed[second[0]][second[1]] = false;
             }
         }
+
         if (found == pairs) {
             System.out.println("You found all pairs!");
         } else {
             System.out.println("Game terminated by user.");
         }
-
     }
 
     private static void fillBoard() {
         List<String> cards = new ArrayList<>();
+
         for (int i = 1; i <= 8; i++) {
             cards.add(String.valueOf(i));
             cards.add(String.valueOf(i));
         }
+
         Collections.shuffle(cards);
 
         int cardIndex = 0;
+
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
                 board[i][j] = cards.get(cardIndex);
@@ -62,11 +65,11 @@ public class MemoryGame {
                 cardIndex++;
             }
         }
-
     }
 
     private static void printBoard() {
         System.out.println("\nMemory Game\n");
+
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
                 if (revealed[i][j]) {
@@ -75,9 +78,8 @@ public class MemoryGame {
                     System.out.print(" [ ] ");
                 }
             }
-        System.out.println();
+            System.out.println();
         }
-
     }
 
     private static int[] select(Scanner scanner) {
@@ -90,6 +92,7 @@ public class MemoryGame {
                 System.out.print("Enter row (1-4): ");
                 row = Integer.parseInt(scanner.nextLine()) - 1;
                 if (row == -1) return new int[]{-1, -1};
+
                 System.out.print("Enter column (1-4): ");
                 col = Integer.parseInt(scanner.nextLine()) - 1;
                 if (col == -1) return new int[]{-1, -1};
@@ -110,5 +113,4 @@ public class MemoryGame {
 
         return new int[]{row, col};
     }
-
 }
