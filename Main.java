@@ -11,6 +11,7 @@ public class Main {
             System.out.println("\nWhat would you like to use?");
             System.out.println("1. Calculator");
             System.out.println("2. Rock-Paper-Scissors game");
+            System.out.println("3. Memory Game");
             System.out.println("0. Exit");
             System.out.print("\nEnter the number of your choice: ");
 
@@ -22,6 +23,9 @@ public class Main {
                     break;
                 case "2":
                     RockPaperScissors.runGame(scanner);
+                    break;
+                case "3":
+                    MemoryGame.runMG(scanner);
                     break;
                 case "0":
                     running = false;
